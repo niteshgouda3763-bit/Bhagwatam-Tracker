@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Śrīmad-Bhāgavatam Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Noto+Sans:wght@400;600&family=Noto+Serif+Devanagari:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="logo">ॐ</div>
+    <div class="brand">Bhāgavatam Course</div>
+    <div id="userbox" class="userbox" hidden>
+      <span id="userName"></span>
+      <button id="btnOut" class="link" type="button">Sign out</button>
+    </div>
+  </header>
+  <section class="hero">
+    <div>
+      <p class="sk">श्रीमद्भागवतम्</p>
+      <h1>Śrīmad-Bhāgavatam<br>Self-Paced Course</h1>
+      <p class="sub">63 classes · a quiz after every class · certificate on completion</p>
+    </div>
+  </section>
+  <main>
+    <p id="notice" class="notice" hidden></p>
+    <section id="viewLoading" class="card center">Loading…</section>
+    <section id="viewLogin" class="card center" hidden>
+      <h2>Welcome</h2>
+      <p>Sign in with your Google account to begin or continue your course.</p>
+      <div id="gbtn" class="gbtn"></div>
+    </section>
+    <section id="viewName" class="card" hidden>
+      <div id="nameEdit">
+        <h2>Your name for the certificate</h2>
+        <p>Type your name exactly as it should be printed on your certificate. You can enter it only once.</p>
+        <form id="formName">
+          <input id="inName" type="text" maxlength="80" autocomplete="name" placeholder="Full name" required>
+          <button class="btn" type="submit">Save and continue</button>
+        </form>
+      </div>
+      <div id="nameConfirm" hidden>
+        <h2>Check your name</h2>
+        <p>Your certificate will print exactly:</p>
+        <p class="bigname" id="confName"></p>
+        <button class="btn" id="btnYes" type="button">Yes, save my name</button>
+        <button class="btn alt" id="btnEdit" type="button">Edit name</button>
+      </div>
+    </section>
+    <section id="viewPlaylist" hidden>
+      <div class="card summary">
+        <div class="stats">
+          <div><span class="big" id="sumDone">0 / 63</span><span class="lbl">classes completed</span></div>
+          <div><span class="big" id="sumMarks">0 / 6300</span><span class="lbl">marks</span></div>
+        </div>
+        <div class="barwrap"><div id="bar" class="bar"></div></div>
+      </div>
+      <h2 class="listhead">Classes</h2>
+      <ul id="classList" class="classes"></ul>
+    </section>
+    <section id="viewClass" hidden>
+      <button id="btnBack" class="btn alt small" type="button">Back to classes</button>
+      <div class="card">
+        <h2 id="clsTitle"></h2>
+        <div class="player" id="playerBox"><div id="ytp"></div></div>
+        <div class="barwrap"><div id="wbar" class="bar"></div></div>
+        <p id="wtext" class="sm"></p>
+        <p id="wwarn" class="warn" hidden></p>
+      </div>
+      <div class="card" id="gateBox"></div>
+    </section>
+  </main>
+  <footer>Hare Kṛṣṇa 🙏</footer>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
